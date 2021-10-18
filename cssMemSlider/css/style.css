@@ -229,28 +229,28 @@ input:nth-of-type(1):checked ~ .navigation .text:nth-of-type(1):after {
     content: "Український політичний діяч, один із чільних ідеологів і теоретиків українського націоналістичного руху XX століття";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 input:nth-of-type(2):checked ~ .navigation .text:nth-of-type(2):after {
     content: "Українська письменниця, перекладачка, фольклористка, культурна діячка, співзасновниця літературного гуртка «Плеяда»";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 input:nth-of-type(3):checked ~ .navigation .text:nth-of-type(3):after {
     content: "Український історик, громадський та політичний діяч. Голова Центральної Ради Української Народної Республіки";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 input:nth-of-type(4):checked ~ .navigation .text:nth-of-type(4):after {
     content: "Політик, полководець і дипломат, творець Української козацької держави та її перший гетьман";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 
@@ -258,28 +258,28 @@ input:nth-of-type(5):checked ~ .navigation .text:nth-of-type(5):after {
     content: "Великий князь київський, князь новгородський. Хреститель Русі. Представник варязької династії Рюриковичів";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 input:nth-of-type(6):checked ~ .navigation .text:nth-of-type(6):after {
     content: "Видатний український поет, прозаїк, драматург, літературний критик, публіцист, перекладач, науковець, політичний діяч";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 input:nth-of-type(7):checked ~ .navigation .text:nth-of-type(7):after {
     content: "Український письменник, класик української літератури, мислитель, художник. Національний герой і символ України";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 input:nth-of-type(8):checked ~ .navigation .text:nth-of-type(8):after {
     content: "Український філософ-містик, богослов, поет, педагог, композитор літургійної музики";
     animation-name: disappear;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 0.8s;
 }
 
 @media (max-width: 1180px) {
@@ -319,25 +319,37 @@ input:nth-of-type(8):checked ~ .navigation .text:nth-of-type(8):after {
 }
 
 @keyframes disappear {
-    0% {
-        color: #151515;
+    100% {
+        opacity: 1;
     }
-    12.5% {
-        color: #5b5b5b;
+    90% {
+        opacity: 0.9;
     }
-    25% {
-        color: #808080;
+    80% {
+        opacity: 0.8;
     }
-    37.5% {
-        color: #9f9f9f;
+    70% {
+        opacity: 0.7;
+    }
+    60% {
+        opacity: 0.6;
     }
     50% {
-        color: #bebebe;
+        opacity: 0.5;
     }
-    72.5% {
-        color: #d7d7d7;
+    40% {
+        opacity: 0.4;
     }
-    100% {
-        color: white;
+    30% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    0% {
+        opacity: 0;
     }
 }
