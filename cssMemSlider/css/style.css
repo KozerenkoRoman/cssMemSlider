@@ -1,0 +1,355 @@
+﻿:root {
+    --col-bg: black;
+    --col-bullet: #c6150d;
+    --height: 870px;
+    --width: 1125px;
+}
+
+@media (max-width: 1180px) {
+    :root {
+        --height: 88vh;
+        --width: 95vw;
+    }
+}
+
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 98%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: var(--col-bg);
+}
+
+body {
+
+}
+
+.csslider {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    min-width: var(--width);
+}
+
+.csslider > input {
+    display: none;
+}
+
+.csslider > input:nth-of-type(10):checked ~ ul li:first-of-type {
+    margin-left: -900%;
+}
+
+.csslider > input:nth-of-type(9):checked ~ ul li:first-of-type {
+    margin-left: -800%;
+}
+
+.csslider > input:nth-of-type(8):checked ~ ul li:first-of-type {
+    margin-left: -700%;
+}
+
+.csslider > input:nth-of-type(7):checked ~ ul li:first-of-type {
+    margin-left: -600%;
+}
+
+.csslider > input:nth-of-type(6):checked ~ ul li:first-of-type {
+    margin-left: -500%;
+}
+
+.csslider > input:nth-of-type(5):checked ~ ul li:first-of-type {
+    margin-left: -400%;
+}
+
+.csslider > input:nth-of-type(4):checked ~ ul li:first-of-type {
+    margin-left: -300%;
+}
+
+.csslider > input:nth-of-type(3):checked ~ ul li:first-of-type {
+    margin-left: -200%;
+}
+
+.csslider > input:nth-of-type(2):checked ~ ul li:first-of-type {
+    margin-left: -100%;
+}
+
+.csslider > input:nth-of-type(1):checked ~ ul li:first-of-type {
+    margin-left: 0;
+}
+
+.menu {
+    border-radius: 1%;
+    box-sizing: border-box;
+    font-size: 0;
+    height: 86vh;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+    width: var(--width);
+}
+
+.menu > li {
+    -moz-background-size: cover;
+    -moz-box-sizing: border-box;
+    -moz-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+    -o-background-size: cover;
+    -o-transition: all 0.5s ease-out;
+    -webkit-background-size: cover;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+    background-size: cover;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 15px;
+    height: 100%;
+    line-height: normal;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+    vertical-align: top;
+    white-space: normal;
+    width: 100%;
+}
+
+.navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    line-height: 40px;
+    min-width: var(--width);
+    user-select: text;
+}
+
+.bullets {
+    display: flex;
+}
+
+.text-info {
+    color: white;
+    overflow-y: hidden;
+    font-size: 1.6em;
+}
+
+.text {
+    color: white;
+    background-color: var(--col-bg);
+    display: flex;
+    z-index: 10;
+}
+
+.bullet {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    background: var(--col-bullet);
+    border: 2px solid var(--col-bullet);
+    user-select: none;
+}
+
+.bullet:hover:after {
+    opacity: 1;
+    background: var(--col-bg);
+    border: 2px solid white;
+}
+
+.bullet:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7px;
+    margin-top: -7px;
+    background: var(--col-bg);
+    border: 2px solid var(--col-bullet);
+    border-radius: 50%;
+    padding: 6px;
+    opacity: 0;
+}
+
+input:nth-of-type(1):checked ~ .navigation .bullet:nth-of-type(1):after,
+input:nth-of-type(2):checked ~ .navigation .bullet:nth-of-type(2):after,
+input:nth-of-type(3):checked ~ .navigation .bullet:nth-of-type(3):after,
+input:nth-of-type(4):checked ~ .navigation .bullet:nth-of-type(4):after,
+input:nth-of-type(5):checked ~ .navigation .bullet:nth-of-type(5):after,
+input:nth-of-type(6):checked ~ .navigation .bullet:nth-of-type(6):after,
+input:nth-of-type(7):checked ~ .navigation .bullet:nth-of-type(7):after,
+input:nth-of-type(8):checked ~ .navigation .bullet:nth-of-type(8):after {
+    opacity: 1;
+    background: white;
+}
+
+.menu > li:nth-of-type(1) {
+    background-image: url("../assets/slide1.webp")
+}
+
+.menu > li:nth-of-type(2) {
+    background-image: url("../assets/slide2.webp")
+}
+
+.menu > li:nth-of-type(3) {
+    background-image: url("../assets/slide3.webp")
+}
+
+.menu > li:nth-of-type(4) {
+    background-image: url("../assets/slide4.webp")
+}
+
+.menu > li:nth-of-type(5) {
+    background-image: url("../assets/slide5.webp")
+}
+
+.menu > li:nth-of-type(6) {
+    background-image: url("../assets/slide6.webp")
+}
+
+.menu > li:nth-of-type(7) {
+    background-image: url("../assets/slide7.webp")
+}
+
+.menu > li:nth-of-type(8) {
+    background-image: url("../assets/slide8.webp")
+}
+
+input:nth-of-type(1):checked ~ .navigation .text:nth-of-type(1):after {
+    content: "Український політичний діяч, один із чільних ідеологів і теоретиків українського націоналістичного руху XX століття";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+input:nth-of-type(2):checked ~ .navigation .text:nth-of-type(2):after {
+    content: "Українська письменниця, перекладачка, фольклористка, культурна діячка, співзасновниця літературного гуртка «Плеяда»";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+input:nth-of-type(3):checked ~ .navigation .text:nth-of-type(3):after {
+    content: "Український історик, громадський та політичний діяч. Голова Центральної Ради Української Народної Республіки";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+input:nth-of-type(4):checked ~ .navigation .text:nth-of-type(4):after {
+    content: "Політик, полководець і дипломат, творець Української козацької держави та її перший гетьман";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+
+input:nth-of-type(5):checked ~ .navigation .text:nth-of-type(5):after {
+    content: "Великий князь київський, князь новгородський. Хреститель Русі. Представник варязької династії Рюриковичів";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+input:nth-of-type(6):checked ~ .navigation .text:nth-of-type(6):after {
+    content: "Видатний український поет, прозаїк, драматург, літературний критик, публіцист, перекладач, науковець, політичний діяч";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+input:nth-of-type(7):checked ~ .navigation .text:nth-of-type(7):after {
+    content: "Український письменник, класик української літератури, мислитель, художник. Національний герой і символ України";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+input:nth-of-type(8):checked ~ .navigation .text:nth-of-type(8):after {
+    content: "Український філософ-містик, богослов, поет, педагог, композитор літургійної музики";
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+}
+
+@media (max-width: 1180px) {
+    .navigation {
+        align-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        justify-content: center;
+        user-select: text;
+    }
+
+    .menu {
+        border-radius: 2%;
+        height: 85vh;
+    }
+
+    .bullets {
+        padding-top: 1em;
+    }
+
+    .text {
+        max-width: 60vw;
+    }
+
+    .text-info {
+        max-width: var(--width);
+        line-height: initial;
+        padding-top: 0.1em;
+    }
+
+    .menu > li {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes disappear {
+    100% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    0% {
+        opacity: 0;
+    }
+}
